@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		7694AB092B614718009D276B /* SKTileMapNode+Tools.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7694AB082B614718009D276B /* SKTileMapNode+Tools.swift */; };
 		76AE89EA2B5C027700A12E0F /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 76AE89E92B5C027700A12E0F /* AppDelegate.swift */; };
 		76AE89EC2B5C027700A12E0F /* GameScene.sks in Resources */ = {isa = PBXBuildFile; fileRef = 76AE89EB2B5C027700A12E0F /* GameScene.sks */; };
 		76AE89F02B5C027700A12E0F /* GameScene.swift in Sources */ = {isa = PBXBuildFile; fileRef = 76AE89EF2B5C027700A12E0F /* GameScene.swift */; };
@@ -22,6 +23,7 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		7694AB082B614718009D276B /* SKTileMapNode+Tools.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "SKTileMapNode+Tools.swift"; sourceTree = "<group>"; };
 		76AE89E62B5C027700A12E0F /* Behind Fall Game.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Behind Fall Game.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		76AE89E92B5C027700A12E0F /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		76AE89EB2B5C027700A12E0F /* GameScene.sks */ = {isa = PBXFileReference; lastKnownFileType = file.sks; path = GameScene.sks; sourceTree = "<group>"; };
@@ -103,6 +105,7 @@
 			isa = PBXGroup;
 			children = (
 				76AE8A0B2B5C0B5E00A12E0F /* SKTexture+Array.swift */,
+				7694AB082B614718009D276B /* SKTileMapNode+Tools.swift */,
 			);
 			path = Tools;
 			sourceTree = "<group>";
@@ -184,6 +187,7 @@
 				76AE89F02B5C027700A12E0F /* GameScene.swift in Sources */,
 				76AE89F22B5C027700A12E0F /* GameViewController.swift in Sources */,
 				76AE8A022B5C031700A12E0F /* SKEntityManager.swift in Sources */,
+				7694AB092B614718009D276B /* SKTileMapNode+Tools.swift in Sources */,
 				76AE8A092B5C0A6D00A12E0F /* AnimationComponent.swift in Sources */,
 				76AE8A072B5C05A700A12E0F /* MovementComponent.swift in Sources */,
 				76AE89EA2B5C027700A12E0F /* AppDelegate.swift in Sources */,
