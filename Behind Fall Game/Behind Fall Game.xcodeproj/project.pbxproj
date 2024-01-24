@@ -8,6 +8,11 @@
 
 /* Begin PBXBuildFile section */
 		7694AB092B614718009D276B /* SKTileMapNode+Tools.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7694AB082B614718009D276B /* SKTileMapNode+Tools.swift */; };
+		76A630072B619D5B00177D66 /* Scenatio Tiles.sks in Resources */ = {isa = PBXBuildFile; fileRef = 76A630062B619D5B00177D66 /* Scenatio Tiles.sks */; };
+		76A630092B619E6600177D66 /* Level01.sks in Resources */ = {isa = PBXBuildFile; fileRef = 76A630082B619E6600177D66 /* Level01.sks */; };
+		76A6300B2B619F8F00177D66 /* ScenarioEntity.swift in Sources */ = {isa = PBXBuildFile; fileRef = 76A6300A2B619F8F00177D66 /* ScenarioEntity.swift */; };
+		76A6300D2B61A11C00177D66 /* PhysicsComponent.swift in Sources */ = {isa = PBXBuildFile; fileRef = 76A6300C2B61A11C00177D66 /* PhysicsComponent.swift */; };
+		76A6300F2B61A23300177D66 /* GroundEntity.swift in Sources */ = {isa = PBXBuildFile; fileRef = 76A6300E2B61A23300177D66 /* GroundEntity.swift */; };
 		76AE89EA2B5C027700A12E0F /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 76AE89E92B5C027700A12E0F /* AppDelegate.swift */; };
 		76AE89EC2B5C027700A12E0F /* GameScene.sks in Resources */ = {isa = PBXBuildFile; fileRef = 76AE89EB2B5C027700A12E0F /* GameScene.sks */; };
 		76AE89F02B5C027700A12E0F /* GameScene.swift in Sources */ = {isa = PBXBuildFile; fileRef = 76AE89EF2B5C027700A12E0F /* GameScene.swift */; };
@@ -24,6 +29,11 @@
 
 /* Begin PBXFileReference section */
 		7694AB082B614718009D276B /* SKTileMapNode+Tools.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "SKTileMapNode+Tools.swift"; sourceTree = "<group>"; };
+		76A630062B619D5B00177D66 /* Scenatio Tiles.sks */ = {isa = PBXFileReference; lastKnownFileType = file.sks; path = "Scenatio Tiles.sks"; sourceTree = "<group>"; };
+		76A630082B619E6600177D66 /* Level01.sks */ = {isa = PBXFileReference; lastKnownFileType = file.sks; path = Level01.sks; sourceTree = "<group>"; };
+		76A6300A2B619F8F00177D66 /* ScenarioEntity.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ScenarioEntity.swift; sourceTree = "<group>"; };
+		76A6300C2B61A11C00177D66 /* PhysicsComponent.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PhysicsComponent.swift; sourceTree = "<group>"; };
+		76A6300E2B61A23300177D66 /* GroundEntity.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GroundEntity.swift; sourceTree = "<group>"; };
 		76AE89E62B5C027700A12E0F /* Behind Fall Game.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Behind Fall Game.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		76AE89E92B5C027700A12E0F /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		76AE89EB2B5C027700A12E0F /* GameScene.sks */ = {isa = PBXFileReference; lastKnownFileType = file.sks; path = GameScene.sks; sourceTree = "<group>"; };
@@ -50,6 +60,15 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		76A630052B619D3F00177D66 /* Scenario */ = {
+			isa = PBXGroup;
+			children = (
+				76A630062B619D5B00177D66 /* Scenatio Tiles.sks */,
+				76A630082B619E6600177D66 /* Level01.sks */,
+			);
+			path = Scenario;
+			sourceTree = "<group>";
+		};
 		76AE89DD2B5C027700A12E0F = {
 			isa = PBXGroup;
 			children = (
@@ -69,6 +88,7 @@
 		76AE89E82B5C027700A12E0F /* Behind Fall Game */ = {
 			isa = PBXGroup;
 			children = (
+				76A630052B619D3F00177D66 /* Scenario */,
 				76AE8A0A2B5C0B4D00A12E0F /* Tools */,
 				76AE8A052B5C059800A12E0F /* Components */,
 				76AE8A002B5C02FC00A12E0F /* Entities */,
@@ -88,6 +108,8 @@
 			children = (
 				76AE8A012B5C031700A12E0F /* SKEntityManager.swift */,
 				76AE8A032B5C044900A12E0F /* PlayerEntity.swift */,
+				76A6300A2B619F8F00177D66 /* ScenarioEntity.swift */,
+				76A6300E2B61A23300177D66 /* GroundEntity.swift */,
 			);
 			path = Entities;
 			sourceTree = "<group>";
@@ -97,6 +119,7 @@
 			children = (
 				76AE8A062B5C05A700A12E0F /* MovementComponent.swift */,
 				76AE8A082B5C0A6D00A12E0F /* AnimationComponent.swift */,
+				76A6300C2B61A11C00177D66 /* PhysicsComponent.swift */,
 			);
 			path = Components;
 			sourceTree = "<group>";
@@ -171,7 +194,9 @@
 				76AE89F52B5C027700A12E0F /* Main.storyboard in Resources */,
 				76AE89EC2B5C027700A12E0F /* GameScene.sks in Resources */,
 				76AE89F72B5C027900A12E0F /* Assets.xcassets in Resources */,
+				76A630092B619E6600177D66 /* Level01.sks in Resources */,
 				76AE89FA2B5C027900A12E0F /* LaunchScreen.storyboard in Resources */,
+				76A630072B619D5B00177D66 /* Scenatio Tiles.sks in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -187,9 +212,12 @@
 				76AE89F02B5C027700A12E0F /* GameScene.swift in Sources */,
 				76AE89F22B5C027700A12E0F /* GameViewController.swift in Sources */,
 				76AE8A022B5C031700A12E0F /* SKEntityManager.swift in Sources */,
+				76A6300F2B61A23300177D66 /* GroundEntity.swift in Sources */,
 				7694AB092B614718009D276B /* SKTileMapNode+Tools.swift in Sources */,
+				76A6300D2B61A11C00177D66 /* PhysicsComponent.swift in Sources */,
 				76AE8A092B5C0A6D00A12E0F /* AnimationComponent.swift in Sources */,
 				76AE8A072B5C05A700A12E0F /* MovementComponent.swift in Sources */,
+				76A6300B2B619F8F00177D66 /* ScenarioEntity.swift in Sources */,
 				76AE89EA2B5C027700A12E0F /* AppDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
