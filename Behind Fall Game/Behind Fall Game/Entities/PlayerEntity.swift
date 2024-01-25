@@ -30,7 +30,7 @@ class PlayerEntity: GKEntity {
             runAction: .repeatForever(.animate(with: .init(withFormat: "run%@.png", range: 1...10), timePerFrame: 0.1)))
         self.addComponent(animationComp)
         
-        let moveComp = MovementComponent(speed: 15)
+        let moveComp = MovementComponent(speed: 12)
         self.addComponent(moveComp)
     }
     
