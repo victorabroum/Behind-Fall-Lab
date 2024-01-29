@@ -21,6 +21,7 @@ class GroundEntity: GKEntity {
         let body = SKPhysicsBody(rectangleOf: size)
         body.isDynamic = false
         body.affectedByGravity = false
+        body.categoryBitMask = .ground
         self.addComponent(PhysicsComponent(physicsBody: body))
     }
     

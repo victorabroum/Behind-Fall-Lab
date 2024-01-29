@@ -25,6 +25,11 @@
 		76AE8A072B5C05A700A12E0F /* MovementComponent.swift in Sources */ = {isa = PBXBuildFile; fileRef = 76AE8A062B5C05A700A12E0F /* MovementComponent.swift */; };
 		76AE8A092B5C0A6D00A12E0F /* AnimationComponent.swift in Sources */ = {isa = PBXBuildFile; fileRef = 76AE8A082B5C0A6D00A12E0F /* AnimationComponent.swift */; };
 		76AE8A0C2B5C0B5E00A12E0F /* SKTexture+Array.swift in Sources */ = {isa = PBXBuildFile; fileRef = 76AE8A0B2B5C0B5E00A12E0F /* SKTexture+Array.swift */; };
+		76D3AB9D2B6820EA00B09EF9 /* EnemyEntity.swift in Sources */ = {isa = PBXBuildFile; fileRef = 76D3AB9C2B6820EA00B09EF9 /* EnemyEntity.swift */; };
+		76D3AB9F2B68229000B09EF9 /* GameScene+ContactDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 76D3AB9E2B68229000B09EF9 /* GameScene+ContactDelegate.swift */; };
+		76D3ABA12B68245600B09EF9 /* SKPhysicsMask.swift in Sources */ = {isa = PBXBuildFile; fileRef = 76D3ABA02B68245600B09EF9 /* SKPhysicsMask.swift */; };
+		76D3ABA32B6825E200B09EF9 /* HurtComponent.swift in Sources */ = {isa = PBXBuildFile; fileRef = 76D3ABA22B6825E200B09EF9 /* HurtComponent.swift */; };
+		76D3ABA52B682A6400B09EF9 /* SpawnEnemyEntity.swift in Sources */ = {isa = PBXBuildFile; fileRef = 76D3ABA42B682A6400B09EF9 /* SpawnEnemyEntity.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -47,6 +52,11 @@
 		76AE8A062B5C05A700A12E0F /* MovementComponent.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MovementComponent.swift; sourceTree = "<group>"; };
 		76AE8A082B5C0A6D00A12E0F /* AnimationComponent.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AnimationComponent.swift; sourceTree = "<group>"; };
 		76AE8A0B2B5C0B5E00A12E0F /* SKTexture+Array.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "SKTexture+Array.swift"; sourceTree = "<group>"; };
+		76D3AB9C2B6820EA00B09EF9 /* EnemyEntity.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EnemyEntity.swift; sourceTree = "<group>"; };
+		76D3AB9E2B68229000B09EF9 /* GameScene+ContactDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "GameScene+ContactDelegate.swift"; sourceTree = "<group>"; };
+		76D3ABA02B68245600B09EF9 /* SKPhysicsMask.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SKPhysicsMask.swift; sourceTree = "<group>"; };
+		76D3ABA22B6825E200B09EF9 /* HurtComponent.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HurtComponent.swift; sourceTree = "<group>"; };
+		76D3ABA42B682A6400B09EF9 /* SpawnEnemyEntity.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SpawnEnemyEntity.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -99,6 +109,7 @@
 				76AE89F32B5C027700A12E0F /* Main.storyboard */,
 				76AE89F62B5C027900A12E0F /* Assets.xcassets */,
 				76AE89F82B5C027900A12E0F /* LaunchScreen.storyboard */,
+				76D3AB9E2B68229000B09EF9 /* GameScene+ContactDelegate.swift */,
 			);
 			path = "Behind Fall Game";
 			sourceTree = "<group>";
@@ -110,6 +121,8 @@
 				76AE8A032B5C044900A12E0F /* PlayerEntity.swift */,
 				76A6300A2B619F8F00177D66 /* ScenarioEntity.swift */,
 				76A6300E2B61A23300177D66 /* GroundEntity.swift */,
+				76D3AB9C2B6820EA00B09EF9 /* EnemyEntity.swift */,
+				76D3ABA42B682A6400B09EF9 /* SpawnEnemyEntity.swift */,
 			);
 			path = Entities;
 			sourceTree = "<group>";
@@ -120,6 +133,7 @@
 				76AE8A062B5C05A700A12E0F /* MovementComponent.swift */,
 				76AE8A082B5C0A6D00A12E0F /* AnimationComponent.swift */,
 				76A6300C2B61A11C00177D66 /* PhysicsComponent.swift */,
+				76D3ABA22B6825E200B09EF9 /* HurtComponent.swift */,
 			);
 			path = Components;
 			sourceTree = "<group>";
@@ -129,6 +143,7 @@
 			children = (
 				76AE8A0B2B5C0B5E00A12E0F /* SKTexture+Array.swift */,
 				7694AB082B614718009D276B /* SKTileMapNode+Tools.swift */,
+				76D3ABA02B68245600B09EF9 /* SKPhysicsMask.swift */,
 			);
 			path = Tools;
 			sourceTree = "<group>";
@@ -209,13 +224,18 @@
 			files = (
 				76AE8A042B5C044900A12E0F /* PlayerEntity.swift in Sources */,
 				76AE8A0C2B5C0B5E00A12E0F /* SKTexture+Array.swift in Sources */,
+				76D3ABA12B68245600B09EF9 /* SKPhysicsMask.swift in Sources */,
 				76AE89F02B5C027700A12E0F /* GameScene.swift in Sources */,
+				76D3ABA32B6825E200B09EF9 /* HurtComponent.swift in Sources */,
 				76AE89F22B5C027700A12E0F /* GameViewController.swift in Sources */,
 				76AE8A022B5C031700A12E0F /* SKEntityManager.swift in Sources */,
 				76A6300F2B61A23300177D66 /* GroundEntity.swift in Sources */,
 				7694AB092B614718009D276B /* SKTileMapNode+Tools.swift in Sources */,
 				76A6300D2B61A11C00177D66 /* PhysicsComponent.swift in Sources */,
 				76AE8A092B5C0A6D00A12E0F /* AnimationComponent.swift in Sources */,
+				76D3AB9D2B6820EA00B09EF9 /* EnemyEntity.swift in Sources */,
+				76D3ABA52B682A6400B09EF9 /* SpawnEnemyEntity.swift in Sources */,
+				76D3AB9F2B68229000B09EF9 /* GameScene+ContactDelegate.swift in Sources */,
 				76AE8A072B5C05A700A12E0F /* MovementComponent.swift in Sources */,
 				76A6300B2B619F8F00177D66 /* ScenarioEntity.swift in Sources */,
 				76AE89EA2B5C027700A12E0F /* AppDelegate.swift in Sources */,
