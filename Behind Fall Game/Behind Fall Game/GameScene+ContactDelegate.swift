@@ -22,18 +22,32 @@ extension GameScene: SKPhysicsContactDelegate {
         
         handleEnemyContactWithGround(entityA: entityA, entityB: entityB)
         handleEnemyContactWithGround(entityA: entityB, entityB: entityA)
+        
+        handleShieldContactWithPlayer(entityA: entityA, entityB: entityB)
+        handleShieldContactWithPlayer(entityA: entityB, entityB: entityA)
     }
     
     private func handleEnemyContactWithPlayer(entityA: GKEntity, entityB: GKEntity) {
         if entityA is PlayerEntity && entityB is EnemyEntity {
-            entityA.component(ofType: HurtComponent.self)?.playAnim()
+            
             entityB.component(ofType: HurtComponent.self)?.playAnim()
+            
+            guard entityA.component(ofType: ImortalComponent.self) == nil else { return }
+            
+            entityA.component(ofType: HurtComponent.self)?.playAnim()
         }
     }
     
     private func handleEnemyContactWithGround(entityA: GKEntity, entityB: GKEntity) {
         if (entityA is GroundEntity || entityA is EnemyEntity) && entityB is EnemyEntity {
             entityB.component(ofType: HurtComponent.self)?.playAnim()
+        }
+    }
+    
+    private func handleShieldContactWithPlayer(entityA: GKEntity, entityB: GKEntity) {
+        if entityA is PlayerEntity && entityB is ShieldEntity {
+            entityA.addComponent(ImortalComponent())
+            self.entityManager?.remove(entity: entityB)
         }
     }
     

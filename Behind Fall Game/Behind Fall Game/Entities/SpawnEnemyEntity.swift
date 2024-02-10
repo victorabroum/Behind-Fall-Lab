@@ -18,12 +18,12 @@ class SpawnEnemyEntity: GKEntity {
         self.addComponent(GKSKNodeComponent(node: node))
         
         node.run(.repeatForever(.sequence([
-            .wait(forDuration: 2),
+            .wait(forDuration: GameConstants.delayToSpawnEnemy),
             .run {
                 // Spawn Enemy
                 let newEnemy = EnemyEntity(position: .init(
-                    x: .random(in: -300...300),
-                    y: 1700), entityManager: entityManager)
+                    x: .random(in: -GameConstants.horizontalRange...GameConstants.horizontalRange),
+                    y: GameConstants.upperPosition), entityManager: entityManager)
                 entityManager.add(entity: newEnemy)
             },
         ])))
