@@ -15,7 +15,9 @@ enum GameConstants {
     
     static let delayToTrySpwanShield: CGFloat = 3
     static let delayToSpawnEnemy: CGFloat = 2
+    static let delayToSpawnCoin: CGFloat = 2
     
-    static let ratioSpwanShield: CGFloat = 0.5
+    static let ratioSpwanShield: CGFloat = 0.7
+    static let ratioSpwanCoin: CGFloat = 0.3
     
 }

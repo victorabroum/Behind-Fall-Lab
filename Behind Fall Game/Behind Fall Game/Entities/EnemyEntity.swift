@@ -21,6 +21,7 @@ class EnemyEntity: GKEntity {
         let body = SKPhysicsBody(rectangleOf: .init(width: 320, height: 320))
         body.categoryBitMask = .enemy
         body.contactTestBitMask = .contactWithAllCategories()
+        body.collisionBitMask = ~(.contactWithAllCategories(less:[.ground, .powerUp]))
         body.restitution = 0
         self.addComponent(PhysicsComponent(physicsBody: body))
         

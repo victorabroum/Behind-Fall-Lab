@@ -48,6 +48,8 @@ class PlayerEntity: GKEntity {
         ]))
         
         self.addComponent(hurtComp)
+        
+        self.addComponent(ScoreComponent())
     }
     
     required init?(coder: NSCoder) {

@@ -25,6 +25,9 @@ extension GameScene: SKPhysicsContactDelegate {
         
         handleShieldContactWithPlayer(entityA: entityA, entityB: entityB)
         handleShieldContactWithPlayer(entityA: entityB, entityB: entityA)
+        
+        handleCoinContactWithPlayer(entityA: entityA, entityB: entityB)
+        handleCoinContactWithPlayer(entityA: entityB, entityB: entityA)
     }
     
     private func handleEnemyContactWithPlayer(entityA: GKEntity, entityB: GKEntity) {
@@ -40,6 +43,7 @@ extension GameScene: SKPhysicsContactDelegate {
     
     private func handleEnemyContactWithGround(entityA: GKEntity, entityB: GKEntity) {
         if (entityA is GroundEntity || entityA is EnemyEntity) && entityB is EnemyEntity {
+            entityB.removeComponent(ofType: PhysicsComponent.self)
             entityB.component(ofType: HurtComponent.self)?.playAnim()
         }
     }
@@ -47,6 +51,15 @@ extension GameScene: SKPhysicsContactDelegate {
     private func handleShieldContactWithPlayer(entityA: GKEntity, entityB: GKEntity) {
         if entityA is PlayerEntity && entityB is ShieldEntity {
             entityA.addComponent(ImortalComponent())
+            self.entityManager?.remove(entity: entityB)
+        }
+    }
+    
+    private func handleCoinContactWithPlayer(entityA: GKEntity, entityB: GKEntity) {
+        if entityA is PlayerEntity && entityB is CoinEntity {
+            
+            entityA.component(ofType: ScoreComponent.self)?.addScore()
+            
             self.entityManager?.remove(entity: entityB)
         }
     }

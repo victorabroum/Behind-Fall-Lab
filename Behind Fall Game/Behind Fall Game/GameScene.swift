@@ -37,6 +37,9 @@ class GameScene: SKScene {
         
         let spawnShields = SpawnShieldEntity(entityManager: entityManager!)
         entityManager?.add(entity: spawnShields)
+        
+        let spawnCoins = SpawnCoinEntity(entityManager: entityManager!)
+        entityManager?.add(entity: spawnCoins)
     }
     
     override func touchesBegan(_ touches: Set<UITouch>, with event: UIEvent?) {

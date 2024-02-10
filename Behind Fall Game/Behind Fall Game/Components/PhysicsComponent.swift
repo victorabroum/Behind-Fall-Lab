@@ -13,6 +13,8 @@ class PhysicsComponent: GKComponent {
     
     var body: SKPhysicsBody
     
+    var node: SKNode?
+    
     init(physicsBody: SKPhysicsBody) {
         self.body = physicsBody
         super.init()
@@ -23,9 +25,12 @@ class PhysicsComponent: GKComponent {
     }
     
     override func didAddToEntity() {
-        if let node = self.entity?.component(ofType: GKSKNodeComponent.self)?.node {
-            node.physicsBody = self.body
-        }
+        node = self.entity?.component(ofType: GKSKNodeComponent.self)?.node
+        node?.physicsBody = self.body
+    }
+    
+    override func willRemoveFromEntity() {
+        node?.physicsBody = nil
     }
     
 }
